@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #08090B;
+    --neon-cyan: #00E5FF;
+    --electric-green: #00FF85;
+    --cyber-violet: #8B5CFF;
+    --hot-magenta: #FF3CAC;
+    --amber-orange: #FF9D4D;
+    --soft-white: #E8F1F5;
+  }
+
+  html, body {
+    background-color: var(--bg-dark);
+    color: var(--soft-white);
+    font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow-x: hidden;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.font-orbitron {
+  font-family: 'Orbitron', monospace;
+}
+
+.font-rajdhani {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.font-chakra {
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* 3D Perspective container */
+.perspective-container {
+  perspective: 1400px;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Subtle CRT / Holographic scanline layer */
+.cyber-scanlines {
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0, 0, 0, 0.25) 50%,
+    rgba(0, 0, 0, 0.25)
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+/* Holographic subtle grid */
+.cyber-grid {
+  background-image: 
+    linear-gradient(to right, rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Neon glow animations */
+@keyframes neon-border-pulse {
+  0%, 100% {
+    opacity: 0.85;
+    filter: drop-shadow(0 0 12px var(--glow-color, rgba(0, 229, 255, 0.6)));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 24px var(--glow-color, rgba(0, 229, 255, 0.9)));
+  }
+}
+
+.animate-neon-glow {
+  animation: neon-border-pulse 3.5s ease-in-out infinite;
+}
+
+/* Noise overlay */
+.cyber-noise {
+  background-image: radial-gradient(rgba(0, 229, 255, 0.12) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Custom scrollbars for details */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(8, 9, 11, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 229, 255, 0.3);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 229, 255, 0.6);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

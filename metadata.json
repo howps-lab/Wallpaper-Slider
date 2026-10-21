@@ -1,0 +1,6 @@
+{
+  "name": "Aetheris // 3D Cyberpunk Slider",
+  "description": "Immersive 3D cyberpunk image and video gallery featuring holographic UI, perspective depth carousel, atmospheric cyber backdrop, and cinematic card interactions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
