@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { GalleryItem } from '../types/gallery';
 import { cyberAudio } from '../utils/cyberAudio';
-import { Maximize2, Play, Eye } from 'lucide-react';
+import { Play, Eye } from 'lucide-react';
 
 interface GalleryCardProps {
   item: GalleryItem;
@@ -217,11 +217,14 @@ export const GalleryCard: React.FC<GalleryCardProps> = ({
         <div className="relative z-10 flex items-center justify-center pointer-events-none">
           {isActive ? (
             <div
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg bg-black/60 backdrop-blur-md border border-white/20 transition-all duration-300 pointer-events-auto ${
-                isHovered ? 'scale-110 border-cyan-400 bg-cyan-950/40 text-cyan-300' : 'text-white/80'
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg bg-black/70 backdrop-blur-md border transition-all duration-300 ${
+                isHovered
+                  ? 'opacity-100 translate-y-0 scale-100 pointer-events-auto text-cyan-300 bg-cyan-950/40'
+                  : 'opacity-0 translate-y-2 scale-95 pointer-events-none text-white/80'
               }`}
               style={{
-                borderColor: isHovered ? item.accentColor : undefined,
+                borderColor: isHovered ? item.accentColor : 'rgba(255, 255, 255, 0.2)',
+                boxShadow: isHovered ? `0 0 20px ${item.accentColor}44` : undefined,
               }}
             >
               <Play className="w-3.5 h-3.5 fill-current" />
@@ -240,32 +243,19 @@ export const GalleryCard: React.FC<GalleryCardProps> = ({
           )}
         </div>
 
-        {/* Bottom Metadata & Title Section */}
-        <div className="relative z-10 p-5 space-y-2">
-          {/* Card Title */}
-          <div>
-            <h3
-              className="font-chakra font-bold text-lg leading-tight tracking-wide text-white transition-colors duration-300"
-              style={{
-                color: isActive ? '#FFFFFF' : '#E8F1F5',
-              }}
-            >
-              {item.title}
-            </h3>
-            <p className="text-xs text-slate-300 font-rajdhani font-medium tracking-wide mt-0.5 line-clamp-1">
-              {item.subtitle}
-            </p>
-          </div>
-
-          {/* Unboxed Specs Footer */}
-          <div className="pt-2 border-t border-white/10 flex items-center justify-between text-[10px] font-mono text-slate-400">
-            <span className="tracking-wider">{item.specs.resolution}</span>
-            <span aria-hidden="true" className="text-slate-600">·</span>
-            <span className="tracking-wider text-slate-300">{item.specs.audioFreq}</span>
-            {isActive && (
-              <Maximize2 className="w-3 h-3 text-cyan-400 ml-1 transition-transform group-hover:scale-125" />
-            )}
-          </div>
+        {/* Bottom Title & Subtitle Section - Positioned closer to the bottom */}
+        <div className="relative z-10 px-5 pb-3.5 pt-0">
+          <h3
+            className="font-chakra font-bold text-lg leading-tight tracking-wide text-white transition-colors duration-300"
+            style={{
+              color: isActive ? '#FFFFFF' : '#E8F1F5',
+            }}
+          >
+            {item.title}
+          </h3>
+          <p className="text-xs text-slate-300 font-rajdhani font-medium tracking-wide mt-0.5 line-clamp-1">
+            {item.subtitle}
+          </p>
         </div>
 
         {/* Corner HUD Brackets */}
