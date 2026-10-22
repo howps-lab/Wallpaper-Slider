@@ -237,18 +237,12 @@ export const ExpandedVideoViewer: React.FC<ExpandedVideoViewerProps> = ({
             </div>
           )}
 
-          {/* CRT scanline layer */}
-          <div className="absolute inset-0 cyber-scanlines opacity-20 pointer-events-none" />
-
           {/* Buffering Indicator */}
           {isBuffering && !videoError && (
             <div className="absolute inset-0 flex items-center justify-center bg-black/30 pointer-events-none">
               <div className="w-10 h-10 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin" />
             </div>
           )}
-
-          {/* Cyber Vignette Shadow */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#08090b] via-transparent to-transparent pointer-events-none" />
 
           {/* In-Video Minimal Controls Overlay */}
           <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/95 via-black/60 to-transparent z-20 space-y-2">

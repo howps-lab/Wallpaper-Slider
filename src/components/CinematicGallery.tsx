@@ -128,18 +128,18 @@ export const CinematicGallery: React.FC = () => {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Main 3D Perspective Gallery Stage - Centered & Lowered on Screen */}
-      <div className="relative w-full flex items-center justify-center translate-y-5 sm:translate-y-7 md:translate-y-9">
+      {/* Main 3D Perspective Gallery Stage - Centered on Screen */}
+      <div className="relative w-full flex items-center justify-center translate-y-2 sm:translate-y-3 md:translate-y-4">
         {/* Subtle Ambient Radial Glow behind the Active Card */}
         <div
-          className="absolute w-[500px] h-[500px] rounded-full pointer-events-none transition-all duration-700 blur-[130px] opacity-25"
+          className="absolute w-[600px] h-[600px] rounded-full pointer-events-none transition-all duration-700 blur-[150px] opacity-25"
           style={{
             backgroundColor: activeCard.accentColor,
           }}
         />
 
-        {/* 3D Container with Shared Perspective */}
-        <div className="relative w-full max-w-6xl h-[420px] sm:h-[460px] flex items-center justify-center perspective-container">
+        {/* 3D Container with Shared Perspective - 20% larger */}
+        <div className="relative w-full max-w-7xl h-[490px] sm:h-[540px] flex items-center justify-center perspective-container">
           {GALLERY_ITEMS.map((item, index) => (
             <GalleryCard
               key={item.id}
@@ -155,7 +155,7 @@ export const CinematicGallery: React.FC = () => {
       </div>
 
       {/* Bottom Navigation positioned directly below the centered cards */}
-      <div className="w-full flex justify-center mt-6 sm:mt-8 translate-y-5 sm:translate-y-7 md:translate-y-9 z-30">
+      <div className="w-full flex justify-center mt-4 sm:mt-6 translate-y-2 sm:translate-y-3 md:translate-y-4 z-30">
         <GalleryNavigation
           currentIndex={activeIndex}
           totalItems={totalItems}

@@ -47,8 +47,8 @@ export const GalleryCard: React.FC<GalleryCardProps> = ({
 
   const isMobile = windowWidth < 640;
   const isTablet = windowWidth >= 640 && windowWidth < 1024;
-  const step1 = isMobile ? 160 : isTablet ? 205 : 245;
-  const step2 = isMobile ? 280 : isTablet ? 370 : 435;
+  const step1 = isMobile ? 185 : isTablet ? 245 : 295;
+  const step2 = isMobile ? 320 : isTablet ? 445 : 525;
 
   // Calculate 3D transformation values
   const getTransform = () => {
@@ -121,8 +121,8 @@ export const GalleryCard: React.FC<GalleryCardProps> = ({
         transform: `translate(-50%, -50%) translate3d(${t.x}px, 0px, ${t.z}px) rotateY(${t.rotateY}deg) scale(${t.scale})`,
         opacity: t.opacity,
         zIndex: t.zIndex,
-        width: 'clamp(270px, 22vw, 320px)',
-        height: 'clamp(380px, 50vh, 440px)',
+        width: 'clamp(325px, 26.5vw, 385px)',
+        height: 'clamp(455px, 58vh, 528px)',
       }}
       role="button"
       tabIndex={0}
@@ -149,17 +149,7 @@ export const GalleryCard: React.FC<GalleryCardProps> = ({
             : undefined,
         }}
       >
-        {/* Animated Neon Border Glow for Active Card */}
-        {isActive && (
-          <div
-            className="absolute inset-0 rounded-2xl pointer-events-none transition-opacity duration-500"
-            style={{
-              background: `linear-gradient(135deg, ${item.accentColor}25, transparent 40%, ${item.secondaryColor}25)`,
-            }}
-          />
-        )}
-
-        {/* Thumbnail Background Image */}
+        {/* Thumbnail Background Image - Clean & True to Original */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <img
             src={item.image}
@@ -169,20 +159,14 @@ export const GalleryCard: React.FC<GalleryCardProps> = ({
               isHovered || isActive ? 'scale-105' : 'scale-100'
             }`}
           />
-          {/* Multi-layered cinematic gradient shading */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#08090b] via-[#08090b]/40 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#08090b]/80 via-transparent to-transparent h-28" />
-
-          {/* CRT scanlines inside card */}
-          <div className="absolute inset-0 cyber-scanlines opacity-25 pointer-events-none" />
         </div>
 
         {/* Top Header Section inside Card */}
-        <div className="relative z-10 p-5 flex items-start justify-between">
+        <div className="relative z-10 p-6 flex items-start justify-between">
           <div>
             {/* Index Number */}
             <span
-              className="font-orbitron font-extrabold text-2xl tracking-wider block drop-shadow-md"
+              className="font-orbitron font-extrabold text-3xl tracking-wider block drop-shadow-md"
               style={{
                 color: isActive ? item.accentColor : '#E8F1F5',
                 textShadow: isActive ? `0 0 12px ${item.accentColor}` : undefined,
@@ -192,7 +176,7 @@ export const GalleryCard: React.FC<GalleryCardProps> = ({
             </span>
 
             {/* Unboxed Category Metadata (Zero-Pill Rule) */}
-            <div className="flex items-center gap-1.5 mt-0.5 text-[10px] font-mono tracking-widest text-slate-300">
+            <div className="flex items-center gap-1.5 mt-0.5 text-[11px] font-mono tracking-widest text-slate-300">
               <span style={{ color: item.accentColor }}>//</span>
               <span className="uppercase">{item.category}</span>
             </div>
@@ -207,7 +191,7 @@ export const GalleryCard: React.FC<GalleryCardProps> = ({
                 boxShadow: isActive ? `0 0 8px ${item.accentColor}` : undefined,
               }}
             />
-            <span className="text-[9px] font-mono tracking-widest text-slate-400">
+            <span className="text-[10px] font-mono tracking-widest text-slate-400">
               {isActive ? 'SYNCED' : 'STANDBY'}
             </span>
           </div>
@@ -217,7 +201,7 @@ export const GalleryCard: React.FC<GalleryCardProps> = ({
         <div className="relative z-10 flex items-center justify-center pointer-events-none">
           {isActive ? (
             <div
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg bg-black/70 backdrop-blur-md border transition-all duration-300 ${
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-lg bg-black/70 backdrop-blur-md border transition-all duration-300 ${
                 isHovered
                   ? 'opacity-100 translate-y-0 scale-100 pointer-events-auto text-cyan-300 bg-cyan-950/40'
                   : 'opacity-0 translate-y-2 scale-95 pointer-events-none text-white/80'
@@ -227,14 +211,14 @@ export const GalleryCard: React.FC<GalleryCardProps> = ({
                 boxShadow: isHovered ? `0 0 20px ${item.accentColor}44` : undefined,
               }}
             >
-              <Play className="w-3.5 h-3.5 fill-current" />
-              <span className="text-[11px] font-mono tracking-widest uppercase">
+              <Play className="w-4 h-4 fill-current" />
+              <span className="text-xs font-mono tracking-widest uppercase">
                 Expand & Play
               </span>
             </div>
           ) : (
             <div
-              className={`p-3 rounded-full bg-black/50 backdrop-blur-md border border-white/15 text-white/70 transition-all duration-300 ${
+              className={`p-3.5 rounded-full bg-black/50 backdrop-blur-md border border-white/15 text-white/70 transition-all duration-300 ${
                 isHovered ? 'scale-110 opacity-100 text-cyan-400 border-cyan-400' : 'opacity-0'
               }`}
             >
@@ -244,35 +228,35 @@ export const GalleryCard: React.FC<GalleryCardProps> = ({
         </div>
 
         {/* Bottom Title & Subtitle Section - Positioned closer to the bottom */}
-        <div className="relative z-10 px-5 pb-3.5 pt-0">
+        <div className="relative z-10 px-6 pb-4 pt-0">
           <h3
-            className="font-chakra font-bold text-lg leading-tight tracking-wide text-white transition-colors duration-300"
+            className="font-chakra font-bold text-xl leading-tight tracking-wide text-white transition-colors duration-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]"
             style={{
               color: isActive ? '#FFFFFF' : '#E8F1F5',
             }}
           >
             {item.title}
           </h3>
-          <p className="text-xs text-slate-300 font-rajdhani font-medium tracking-wide mt-0.5 line-clamp-1">
+          <p className="text-sm text-slate-200 font-rajdhani font-medium tracking-wide mt-1 line-clamp-1 drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)]">
             {item.subtitle}
           </p>
         </div>
 
         {/* Corner HUD Brackets */}
         <div
-          className="absolute top-1.5 left-1.5 w-2 h-2 border-t-2 border-l-2 pointer-events-none"
+          className="absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 pointer-events-none"
           style={{ borderColor: isActive ? item.accentColor : 'rgba(255,255,255,0.2)' }}
         />
         <div
-          className="absolute top-1.5 right-1.5 w-2 h-2 border-t-2 border-r-2 pointer-events-none"
+          className="absolute top-2 right-2 w-3 h-3 border-t-2 border-r-2 pointer-events-none"
           style={{ borderColor: isActive ? item.accentColor : 'rgba(255,255,255,0.2)' }}
         />
         <div
-          className="absolute bottom-1.5 left-1.5 w-2 h-2 border-b-2 border-l-2 pointer-events-none"
+          className="absolute bottom-2 left-2 w-3 h-3 border-b-2 border-l-2 pointer-events-none"
           style={{ borderColor: isActive ? item.accentColor : 'rgba(255,255,255,0.2)' }}
         />
         <div
-          className="absolute bottom-1.5 right-1.5 w-2 h-2 border-b-2 border-r-2 pointer-events-none"
+          className="absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 pointer-events-none"
           style={{ borderColor: isActive ? item.accentColor : 'rgba(255,255,255,0.2)' }}
         />
       </div>
