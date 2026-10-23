@@ -115,16 +115,49 @@ export const ExpandedVideoViewer: React.FC<ExpandedVideoViewerProps> = ({
     setIsMuted(video.muted);
   };
 
+  // Fullscreen change listener to sync isFullscreen state
+  useEffect(() => {
+    const onFullscreenChange = () => {
+      const isFull = !!(
+        document.fullscreenElement ||
+        (document as unknown as { webkitFullscreenElement?: Element }).webkitFullscreenElement
+      );
+      setIsFullscreen(isFull);
+    };
+
+    document.addEventListener('fullscreenchange', onFullscreenChange);
+    document.addEventListener('webkitfullscreenchange', onFullscreenChange);
+    return () => {
+      document.removeEventListener('fullscreenchange', onFullscreenChange);
+      document.removeEventListener('webkitfullscreenchange', onFullscreenChange);
+    };
+  }, []);
+
   const toggleFullscreen = () => {
-    if (!containerRef.current) return;
-    if (!document.fullscreenElement) {
-      containerRef.current.requestFullscreen().then(() => {
-        setIsFullscreen(true);
-      }).catch(console.error);
+    const video = videoRef.current;
+    if (!video) return;
+
+    const isCurrentlyFullscreen = !!(
+      document.fullscreenElement ||
+      (document as unknown as { webkitFullscreenElement?: Element }).webkitFullscreenElement
+    );
+
+    if (!isCurrentlyFullscreen) {
+      if (video.requestFullscreen) {
+        video.requestFullscreen().catch((err) => {
+          console.warn('Video fullscreen request failed:', err);
+        });
+      } else if ((video as unknown as { webkitRequestFullscreen?: () => Promise<void> }).webkitRequestFullscreen) {
+        (video as unknown as { webkitRequestFullscreen: () => Promise<void> }).webkitRequestFullscreen();
+      } else if ((video as unknown as { webkitEnterFullscreen?: () => void }).webkitEnterFullscreen) {
+        (video as unknown as { webkitEnterFullscreen: () => void }).webkitEnterFullscreen();
+      }
     } else {
-      document.exitFullscreen().then(() => {
-        setIsFullscreen(false);
-      }).catch(console.error);
+      if (document.exitFullscreen) {
+        document.exitFullscreen().catch(console.error);
+      } else if ((document as unknown as { webkitExitFullscreen?: () => Promise<void> }).webkitExitFullscreen) {
+        (document as unknown as { webkitExitFullscreen: () => Promise<void> }).webkitExitFullscreen();
+      }
     }
   };
 
