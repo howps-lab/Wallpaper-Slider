@@ -120,3 +120,12 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* Fullscreen video native aspect ratio preservation */
+video:fullscreen,
+video:-webkit-full-screen {
+  object-fit: contain !important;
+  background-color: #000000 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+}

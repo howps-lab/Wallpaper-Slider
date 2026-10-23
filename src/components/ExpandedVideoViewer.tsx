@@ -244,7 +244,9 @@ export const ExpandedVideoViewer: React.FC<ExpandedVideoViewerProps> = ({
                 setVideoError(true);
                 setIsBuffering(false);
               }}
-              className="w-full h-full object-cover object-center cursor-pointer"
+              className={`w-full h-full cursor-pointer transition-all duration-300 ${
+                isFullscreen ? 'object-contain bg-black' : 'object-cover object-center'
+              }`}
               onClick={togglePlay}
             />
           ) : (
