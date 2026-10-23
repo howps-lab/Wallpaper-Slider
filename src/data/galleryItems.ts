@@ -4,21 +4,21 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'neon-city-streets',
     indexStr: '01',
-    title: 'NEO-TOKYO SECTOR 07',
+    title: 'AI Prompt | Make Image Comes Alive',
     subtitle: 'Rain-slicked autonomous corridor',
     category: 'NEON CITY STREETS',
     image: '/images/urban_neon_tokyo.jpg',
     video: '/videos/urban_neon_tokyo_dreamina_cropped.mp4',
     accentColor: '#00E5FF',
     secondaryColor: '#00FF85',
-    description: 'Autonomous cybernetic law enforcement spinners patrolling the nocturnal rain-slicked thoroughfares of Upper Shinjuku. Volumetric neon billboards cast deep cyan and hot magenta refractions across wet composite pavement.',
+    description: 'Make the characters in image move forward along the streets. Rain continue to pour down.',
     specs: {
       sector: 'SECTOR-07 / SUB-DECK 4',
-      coordinates: '35.6895° N, 139.6917° E',
-      clearance: 'LEVEL-04 LAW ENFORCEMENT',
-      bandwidth: '128.4 TB/S TELEMETRY',
+      coordinates: '720 dpi',
+      clearance: 'Dreamina AI',
+      bandwidth: '5 Seconds',
       resolution: '4K DCI // 60 FPS',
-      audioFreq: '110 Hz RESONANCE'
+      audioFreq: 'Dreamina Seedance 2.0 Mini'
     }
   },
   {
@@ -34,11 +34,11 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     description: 'Experimental aerodynamic prototype equipped with active plasma edge runners and magnetic levitation dampeners. Designed for supersonic highway transit through underground pressurized mag-tubes.',
     specs: {
       sector: 'TEST MATRIX // HANGAR 12',
-      coordinates: '37.7749° N, 122.4194° W',
-      clearance: 'CLASSIFIED PROTOTYPE',
-      bandwidth: '256.0 TB/S SENSOR FEED',
+      coordinates: '720 dpi',
+      clearance: 'Dreamina AI',
+      bandwidth: '5 Seconds',
       resolution: '4K DCI // 60 FPS',
-      audioFreq: '82 Hz LOW RUMBLE'
+      audioFreq: 'Dreamina Seedance 2.0 Mini'
     }
   },
   {
@@ -84,21 +84,21 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'digital-landscapes',
     indexStr: '05',
-    title: 'QUANTUM AURORA EXPANSE',
+    title: 'AI Prompt | Make Image Comes Alive',
     subtitle: 'Crystallized lattice topography',
     category: 'DIGITAL LANDSCAPES',
-    image: '/images/digital_landscape.jpg',
-    video: '/videos/digital_landscapes.mp4',
+    image: '/images/urban_neon_tokyo.jpg',
+    video: '/videos/urban_neon_tokyo_dreamina_02_cropped.mp4',
     accentColor: '#00E5FF',
     secondaryColor: '#FF3CAC',
-    description: 'Infinite synthesized frontier generated inside a Dyson neural net. Prismatic bismuth spires refract electromagnetic auroras across undulating grid plateaus of solid photon structures.',
+    description: 'Make the characters in image move forward along the streets. Make the front car start engine and slowing move forward. Heavy rain continue to pour down. A sports car speeding into view along the street.',
     specs: {
       sector: 'SYNTHETIC VALLEYS // GRID-X',
-      coordinates: '64.9631° N, 19.0208° W',
-      clearance: 'NEURAL EXPLORER ALPHA',
-      bandwidth: '940.2 TB/S TOPOLOGY',
+      coordinates: '720 dpi',
+      clearance: 'Dreamina AI',
+      bandwidth: '5 Seconds',
       resolution: '4K DCI // 60 FPS',
-      audioFreq: '130 Hz IONIC DRIFT'
+      audioFreq: 'Dreamina Seedance 2.0 Mini'
     }
   },
   {
