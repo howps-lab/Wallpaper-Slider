@@ -404,7 +404,7 @@ export const ExpandedVideoViewer: React.FC<ExpandedVideoViewerProps> = ({
               <div className="flex items-center justify-between text-slate-400">
                 <span className="flex items-center gap-1.5">
                   <Shield className="w-3.5 h-3.5 text-cyan-400" />
-                  CLEARANCE
+                  SOFTWARE
                 </span>
                 <span className="text-slate-200">{item.specs.clearance}</span>
               </div>
@@ -412,7 +412,7 @@ export const ExpandedVideoViewer: React.FC<ExpandedVideoViewerProps> = ({
               <div className="flex items-center justify-between text-slate-400">
                 <span className="flex items-center gap-1.5">
                   <Activity className="w-3.5 h-3.5 text-purple-400" />
-                  COORDINATES
+                  OUTPUT
                 </span>
                 <span className="text-slate-200">{item.specs.coordinates}</span>
               </div>
@@ -420,7 +420,7 @@ export const ExpandedVideoViewer: React.FC<ExpandedVideoViewerProps> = ({
               <div className="flex items-center justify-between text-slate-400">
                 <span className="flex items-center gap-1.5">
                   <Radio className="w-3.5 h-3.5 text-emerald-400" />
-                  BANDWIDTH
+                  DURATION
                 </span>
                 <span className="text-slate-200">{item.specs.bandwidth}</span>
               </div>
@@ -428,7 +428,7 @@ export const ExpandedVideoViewer: React.FC<ExpandedVideoViewerProps> = ({
               <div className="flex items-center justify-between text-slate-400">
                 <span className="flex items-center gap-1.5">
                   <Cpu className="w-3.5 h-3.5 text-amber-400" />
-                  AUDIO HARMONIC
+                  AI MODEL
                 </span>
                 <span className="text-slate-200">{item.specs.audioFreq}</span>
               </div>
