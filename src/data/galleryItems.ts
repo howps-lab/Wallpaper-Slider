@@ -111,14 +111,14 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     video: '/videos/urban_neon_tokyo_06_kling.mp4',
     accentColor: '#FF3CAC',
     secondaryColor: '#FF9D4D',
-    description: 'High-frequency holographic data conduits streaming cognitive impulses across orbital relay nodes. Visualizes real-time cryptographic handshakes rendered as multidimensional light bands.',
+    description: 'A stylish rider comes into view from the right and mount the motorbike at Image1 . Start the engine and speed off into the distance.',
     specs: {
       sector: 'DATA RELAY // ORBIT-8',
-      coordinates: '720 dpi',
-      clearance: 'Dreamina AI',
-      bandwidth: '5 Seconds',
+      coordinates: '720 dpi, Multi-Shot',
+      clearance: 'Kling AI',
+      bandwidth: '7 Seconds',
       resolution: '4K DCI // 60 FPS',
-      audioFreq: 'Dreamina Seedance 2.0 Mini'
+      audioFreq: 'Kling 3.0 Omni'
     }
   }
 ];
