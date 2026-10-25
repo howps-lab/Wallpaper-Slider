@@ -108,7 +108,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     subtitle: 'Rain-slicked city street',
     category: 'EXPERIMENTAL MOTION GRAPHICS',
     image: '/images/urban_neon_tokyo_06.jpg',
-    video: '/videos/experimental_motion_graphics.mp4',
+    video: '/videos/urban_neon_tokyo_06_kling.mp4',
     accentColor: '#FF3CAC',
     secondaryColor: '#FF9D4D',
     description: 'High-frequency holographic data conduits streaming cognitive impulses across orbital relay nodes. Visualizes real-time cryptographic handshakes rendered as multidimensional light bands.',
