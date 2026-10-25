@@ -27,7 +27,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'APEX VORTEX INTERCEPTOR',
     subtitle: 'Kinetic carbon-fiber hyper-chassis',
     category: 'FUTURISTIC SUPERCARS',
-    image: '/images/futuristic_supercars.jpg',
+    image: '/images/urban_neon_tokyo_02.jpg',
     video: '/videos/futuristic_supercars.mp4',
     accentColor: '#FF9D4D',
     secondaryColor: '#00E5FF',
@@ -47,18 +47,18 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'CHRONO PLASMA REACTOR',
     subtitle: 'Self-stabilizing quantum confinement',
     category: 'ABSTRACT ENERGY FORMS',
-    image: '/images/abstract_energy_forms.jpg',
+    image: '/images/urban_neon_tokyo_03.jpg',
     video: '/videos/abstract_energy_forms.mp4',
     accentColor: '#00FF85',
     secondaryColor: '#8B5CFF',
     description: 'Zero-point magnetic torus capturing high-energy antimatter plasma. The fluctuating helical filament streams create instantaneous temporal dilation pockets across the magnetic containment cage.',
     specs: {
       sector: 'DEEP LAB // CRADLE-9',
-      coordinates: '46.2044° N, 06.1432° E',
-      clearance: 'OMEGA ZERO POINT',
-      bandwidth: '1.2 PB/S FLUX ARRAY',
+      coordinates: '720 dpi',
+      clearance: 'Dreamina AI',
+      bandwidth: '5 Seconds',
       resolution: '4K DCI // 60 FPS',
-      audioFreq: '146 Hz PLASMA HUM'
+      audioFreq: 'Dreamina Seedance 2.0 Mini'
     }
   },
   {
@@ -67,18 +67,18 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'ARC-7 BRUTALIST MEGASTRUCTURE',
     subtitle: 'Atmospheric terraforming arcology',
     category: 'CYBERNETIC ARCHITECTURE',
-    image: '/images/cybernetic_arch.jpg',
+    image: '/images/urban_neon_tokyo_04.jpg',
     video: '/videos/cybernetic_architecture.mp4',
     accentColor: '#8B5CFF',
     secondaryColor: '#FF3CAC',
     description: 'A 2.4-kilometer high brutalist monolith housing over five million cybernetic citizens. High-altitude skyways connect suspended corporate observation pods piercing through the smog-shrouded stratosphere.',
     specs: {
       sector: 'ARCOLOGY COMPLEX // ZONE 3',
-      coordinates: '22.3193° N, 114.1694° E',
-      clearance: 'CIVIC STRUCTURAL ENG',
-      bandwidth: '512.8 TB/S GRID LOAD',
+      coordinates: '720 dpi',
+      clearance: 'Dreamina AI',
+      bandwidth: '5 Seconds',
       resolution: '4K DCI // 60 FPS',
-      audioFreq: '98 Hz WIND SHEAR'
+      audioFreq: 'Dreamina Seedance 2.0 Mini'
     }
   },
   {
@@ -107,18 +107,18 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'KINETIC NEURAL STREAMS',
     subtitle: 'Hyper-spatial vector displacement',
     category: 'EXPERIMENTAL MOTION GRAPHICS',
-    image: '/images/motion_graphics.jpg',
+    image: '/images/urban_neon_tokyo_06.jpg',
     video: '/videos/experimental_motion_graphics.mp4',
     accentColor: '#FF3CAC',
     secondaryColor: '#FF9D4D',
     description: 'High-frequency holographic data conduits streaming cognitive impulses across orbital relay nodes. Visualizes real-time cryptographic handshakes rendered as multidimensional light bands.',
     specs: {
       sector: 'DATA RELAY // ORBIT-8',
-      coordinates: '00.0000° N, 00.0000° E',
-      clearance: 'CYBER-SPACE OPERATOR',
-      bandwidth: '2.4 PB/S OPTICAL BURST',
+      coordinates: '720 dpi',
+      clearance: 'Dreamina AI',
+      bandwidth: '5 Seconds',
       resolution: '4K DCI // 60 FPS',
-      audioFreq: '164 Hz DATA CHIRP'
+      audioFreq: 'Dreamina Seedance 2.0 Mini'
     }
   }
 ];
